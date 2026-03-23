@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тяжёлый Люкс — Красивые номера</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #111;
+            color: #f5f5f5;
+        }
+        header {
+            background: #222;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 5px solid #ffd700;
+        }
+        .logo {
+            font-size: 2em;
+            color: #ffd700;
+            font-weight: bold;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #ffd700;
+        }
+        .types, .tariffs {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .type-card, .tariff-card {
+            background: #1a1a1a;
+            border: 2px solid transparent;
+            border-radius: 12px;
+            padding: 25px;
+            width: 280px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        .type-card:hover, .tariff-card:hover {
+            border-color: #ffd700;
+            transform: translateY(-8px);
+        }
+        .type-card h3, .tariff-card h3 {
+            color: #ffd700;
+            margin-bottom: 15px;
+        }
+        .type-card p, .tariff-card p {
+            color: #ccc;
+        }
+        .tariff-card.price {
+            font-size: 1.8em;
+            color: #ffd700;
+            margin-bottom: 15px;
+        }
+        .tariff-card button {
+            background: #ffd700;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        .tariff-card button:hover {
+            background: #e6b800;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <div class="logo">Тяжёлый Люкс</div>
+    </div>
+</header>
+
+<div class="container">
+    <h1>Эксклюзивные красивые номера</h1>
+
+    <section>
+        <h2 style="text-align:center; margin-bottom:25px;">Классификация номеров</h2>
+        <div class="types">
+            <div class="type-card">
+                <h3>Золотые</h3>
+                <p>Роскошные сочетания цифр для истинных ценителей.</p>
+                <button>Выбрать</button>
+            </div>
+            <div class="type-card">
+                <h3>Платиновые</h3>
+                <p>Уникальные номера с зеркальными и повторяющимися цифрами.</p>
+                <button>Выбрать</button>
+            </div>
+            <div class="type-card">
+                <h3>Бриллиантовые</h3>
+                <p>Эксклюзивные номера для VIP-клиентов.</p>
+                <button>Выбрать</button>
+            </div>
+        </div>
+    </section>
+
+    <section style="margin-top:60px;">
+        <h2 style="text-align:center; margin-bottom:25px;">Тарифы на подключение</h2>
+        <div class="tariffs">
+            <div class="tariff-card">
+                <h3>Старт</h3>
+                <p class="price">99 999 ₽</p>
+                <p>Базовый пакет услуг</p>
+                <button>Оформить</button>
+            </div>
+
+             <div class="tariff-card">
+                <h3>Комфорт</h3>
+                <p class="price">199 999 ₽</p>
+                <p>Расширенный пакет услуг</p>
+                <button>Оформить</button>
+             </div>
+
+             <div class="tariff-card">
+                <h3>Бизнес</h3>
+                <p class="price">399 999 ₽</p>
+                <p>Для предпринимателей</p>
+                <button>Оформить</button>
+             </div>
+
+             <div class="tariff-card">
+                <h3>Премиум</h3>
+                <p class="price">699 999 ₽</p>
+                <p>Эксклюзивные условия</p>
+                <button>Оформить</button>
+             </div>
+
+             <div class="tariff-card">
+                <h3>VIP</h3>
+                <p class="price">999 999 ₽</p>
+                <p>Персональный менеджер</p>
+                <button>Оформить</button>
+             </div>
+
+             <div class="tariff-card">
+                 <h3>Люкс</h3>
+                 <p class="price">1 499 999 ₽</p>
+                 <p>Максимальный пакет услуг</p>
+                 <button>Оформить</button>
+             </div>
+
+             <div class="tariff-card">
+                 <h3>Эксклюзив</h3>
+                 <p class="price">2 499 999 ₽</p>
+                 <p>Только по приглашению</p>
+                 <button>Оформить</button>
+             </div>
+
+             <div class="tariff-card">
+                 <h3>Легенда</h3>
+                 <p class="price">4 999 999 ₽</p>
+                 <p>Номер для истории</p>
+                 <button>Оформить</button>
+             </div>
+
+         </div>
+     </section>
+
+ </div>
+
+<script>
+    // Простая логика для кнопок (можно расширить)
+    document.querySelectorAll('.type-card button, .tariff-card button').forEach(btn => {
+        btn.addEventListener('click', () => {
+           alert('Спасибо за интерес! Наш менеджер свяжется с вами.');
+       });
+   });
+</script>
+
+</body>
+</html>
